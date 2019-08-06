@@ -3,14 +3,41 @@
   <link rel="stylesheet" type="text/css" href="index.css">
 <body>
 
-<h1>A heading</h1>
-
-<p>An accompanying paragraph <a href="/another_page/another_page.html"> 
-  A link within this paragraph to another page</a></p>
-
+ 
 <div>
-  <button type="button" class="gateway">Click Me</button>
+    <canvas class="canvas" id="canvas1" onmousemove="myFunction(event)"> </canvas>
+
+    <div onmousemove="all()"></div>
+
+    <div>
+    <h1>A heading</h1>
+
+    <p>An accompanying paragraph <a href="/another_page/another_page.html"> 
+      A link within this paragraph to another page</a></p>
+    
+    <p id="firstPara">There's something more interesting on this page</p>
+    
+    <p> Console : </p>
+    
+    <p id="c1">Output</p>
+    
+    <div>
+      <button type="button" class="gateway" id="g1">Click Me</button>
+    </div>
+  </div>
 </div>
+
+
+
+<script>
+  function myFunction(e){
+    var x = e.clientX;
+    var y = e.clientY;
+    var coor = "Coordinates : (" + x + "," + y + ")";
+    document.getElementById("c1").innerHTML = coor;
+  }
+
+</script>
 
 </body>
 </html>
